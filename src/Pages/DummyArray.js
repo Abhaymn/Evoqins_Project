@@ -7,6 +7,8 @@ import pic4 from "../assets/pic4.png";
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import Rating from './Rating';
+import { Link } from 'react-router-dom';
+import StarRatings from 'react-star-ratings';
 
 
 const DummyArray = () => {
@@ -63,8 +65,51 @@ const DummyArray = () => {
       </div>
       
       <div>
-      <Rating/>
-    <div className='col-md-8 offset-md-4 '  >
+      <div className="row">
+          <div className="col-md-2">
+          <h5 style={{fontSize:'12px'}} className='fw fw-bold'>Rating by</h5>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',paddingRight:'50px' }}>
+              
+              <StarRatings
+                rating={4}
+                starRatedColor="gold"
+                starEmptyColor="lightgray"
+                numberOfStars={5}
+                starDimension="20px"
+                starSpacing="2px"
+                changeRating={(newRating) => console.log(newRating)}
+              />
+              <StarRatings
+                rating={3}
+                starRatedColor="gold"
+                starEmptyColor="lightgray"
+                numberOfStars={5}
+                starDimension="20px"
+                starSpacing="2px"
+                changeRating={(newRating) => console.log(newRating)}
+              />
+              <StarRatings
+                rating={2}
+                starRatedColor="gold"
+                starEmptyColor="lightgray"
+                numberOfStars={5}
+                starDimension="20px"
+                starSpacing="2px"
+                changeRating={(newRating) => console.log(newRating)}
+              />
+              <StarRatings
+                rating={1}
+                starRatedColor="gold"
+                starEmptyColor="lightgray"
+                numberOfStars={5}
+                starDimension="20px"
+                starSpacing="2px"
+                changeRating={(newRating) => console.log(newRating)}
+              /> 
+            </div>
+          </div>
+          
+    <div className='col-md-10' style={{paddingLeft:'100px'}}  >
    
     
       <div className="row">
@@ -91,7 +136,7 @@ const DummyArray = () => {
                 style={{ marginLeft: '1rem', marginRight: '1rem' }}
               >
                 <Button className="mb-2">View More Details</Button>
-                <Button variant="outline-primary" className="mb-2">
+                <Button variant="outline-primary" className="mb-2" as={Link} to='/login'>
                   Open an account
                 </Button>
               </div>
@@ -122,7 +167,7 @@ const DummyArray = () => {
                 style={{ marginLeft: '1rem', marginRight: '1rem' }}
               >
                 <Button className="mb-2">View More Details</Button>
-                <Button variant="outline-primary" className="mb-2">
+                <Button variant="outline-primary" className="mb-2" as={Link} to='/login'>
                   Open an account
                 </Button>
               </div>
@@ -131,6 +176,7 @@ const DummyArray = () => {
         </div>
       </div>
       </div>
+    </div>
     </div>
     </div>
     

@@ -3,6 +3,7 @@ import { Button, Image } from 'react-bootstrap'
 import FooterImg from "../assets/footer.png";
 import { Card } from 'react-bootstrap';
 import classes from "./Header.module.css"
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const cardStyle = {
@@ -21,7 +22,7 @@ const Footer = () => {
     
             <Card.Title style={{ fontWeight: 'bold', fontSize: '35px',color:'white' }} >Join the family today!</Card.Title>
             <Card.Text style={{color:'white'}}>Take advantage of the various products to build your own customized trading strategies.</Card.Text>
-            <Button variant="light" style={{color:'#0080FF'}}>Open new account</Button>
+            <Button variant="light" style={{color:'#0080FF'} } as={Link} to='/login'>Open new account</Button>
         </Card.Body>
 </Card>
     </div>
