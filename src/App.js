@@ -26,9 +26,6 @@ const Resources=React.lazy(()=>import('./Pages/Resources'));
 
 
 
-
-
-
 function App() {
  
   return (

@@ -47,11 +47,7 @@ const DummyArray = () => {
   return (
     <Fragment>
     <Header />
-
-    
- 
-    <div className="container " >
-    
+    <div className="container">
       <div className="row">
         <div className="col-md-4  mb-4 mt-5">
           <input
